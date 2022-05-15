@@ -117,10 +117,9 @@ ul {
     padding-top: 32px;
     padding-bottom: 32px;
     transition: color 250ms var(--timing-function);
-
 }
 
-.site-nav .link .list-current+.link {
+.site-nav .link .site-nav__link--current+.link {
     margin-left: 50px;
 }
 
@@ -165,15 +164,15 @@ ul {
     color: var(--accent-color); 
     transition: color 250ms var(--timing-function);
 }
-.site-nav.list .list-current {
+.site-nav.list .site-nav__link--current {
     color: var(--accent-color);
 }
 
-.site-nav .link .list-current {
+.site-nav .link .site-nav__link--current {
     color: var(--accent-color);
     
 }
-.list-current::after {
+.site-nav__link--current::after {
     content: "";
     width: 100%;
     height: 4px;
@@ -184,7 +183,6 @@ ul {
     border-radius: 2px;
     bottom: -1px;
 }
-
 
 .contact {
     font-weight: 500;
@@ -349,7 +347,6 @@ ul {
 .filter .but + .but {
     margin-left: 8px;
 }
-
 
 .buttons {
     color: var(--title-text-color);
@@ -600,27 +597,27 @@ ul {
     padding-bottom: 30px;    
 }
 
-.name {
+.our__name {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
     color: var(--title-text-color);
     margin-bottom: 10px;
 }
-.position {
+.our__position {
     font-size: 16px;
     line-height: 1.19;
     color: var(--primary-text-color);
     margin-bottom: 16px;  
 }
-.masters-soc-list {
+.our__masters-soc-list {
     display: flex;
     justify-content: center;
 }
-.masters-soc-item + .masters-soc-item {
+.our__masters-soc-item + .our__masters-soc-item {
     margin-left: 10px;
 }
-.masters-soc-link {
+.our__masters-soc-link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -633,25 +630,25 @@ ul {
     background-color 250ms var(--timing-function);
     
 }
-.masters-soc-icon {
+.our__masters-soc-icon {
     fill: var(--icon-color);
     transition: fill 250ms var(--timing-function);
 }
 
-.masters-soc-link:hover,
-.masters-soc-link:focus {
+.our__masters-soc-link:hover,
+.our__masters-soc-link:focus {
     fill: var(--primary-white-color);
     background-color: var(--accent-color);
     transition: background-color 250ms var(--timing-function), fill 250ms var(--timing-function);
     
 }
-.masters-soc-link:hover .masters-soc-icon {
+.our__masters-soc-link:hover .our__masters-soc-icon {
     fill: var(--primary-white-color);
 }
-.masters-soc-link:focus .masters-soc-icon {
+.our__masters-soc-link:focus .our__masters-soc-icon {
     fill: var(--primary-white-color);
 }
-.masters-soc-item {
+.our__masters-soc-item {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
 }
@@ -806,7 +803,54 @@ ul {
     display: flex;
     margin-bottom: 20px;
 }
-/* Футер Subscribe */
+.social__masters-soc-list {
+    display: flex;
+    justify-content: center;
+}
+
+.social__masters-soc-item+.social__masters-soc-item {
+    margin-left: 10px;
+}
+
+.social__masters-soc-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: var(--backgrcolor);
+    border-radius: 50%;
+    fill: var(--primary-white-color);
+    transition: border-radius 250ms var(--timing-function),
+        background-color 250ms var(--timing-function);
+}
+.social__masters-soc-icon {
+    fill: var(--icon-color);
+    transition: fill 250ms var(--timing-function);
+}
+
+.social__masters-soc-link:hover,
+.social__masters-soc-link:focus {
+    fill: var(--primary-white-color);
+    background-color: var(--accent-color);
+    transition: background-color 250ms var(--timing-function), fill 250ms var(--timing-function);
+
+}
+
+.social__masters-soc-link:hover .social__masters-soc-icon {
+    fill: var(--primary-white-color);
+}
+
+.social__masters-soc-link:focus .social__masters-soc-icon {
+    fill: var(--primary-white-color);
+}
+
+.social__masters-soc-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+/* Футер Subscribe / Подписаться */
 
 .subscribe {
     display: block;
@@ -815,14 +859,14 @@ ul {
     margin-left: 93px;
 }
 
-.subscribe-title {
+.subscribe__title {
     font-weight: 700;
     text-transform: uppercase;
     color: var(--primary-white-color);
     margin-bottom: 20px;
 }
 
-.subscribe-field {
+.subscribe__field {
     display: inline-flex;
 }
 
@@ -830,7 +874,7 @@ ul {
     display: inline-flex;
 }
 
-.subscribe-email {
+.subscribe__email {
     width: 358px;
     height: 50px;
     padding-left: 16px;
@@ -844,38 +888,38 @@ ul {
     transition: border 250ms var(--timing-function);
 }
 
-.subscribe-email:focus {
+.subscribe__email:focus {
     outline: none;
     color: var(--primary-white-color);
     border: 1px solid var(--accent-color);
     transition: border 250ms var(--timing-function);
 }
 
-.subscribe-email:-webkit-autofill {
+.subscribe__email:-webkit-autofill {
     border: 1px solid var(--color-email-footer);
     -webkit-text-fill-color: var(--color-email-footer);
     -webkit-box-shadow: 0 0 0px 1000px #212121 inset;
     transition: background-color 5000s ease-in-out 0s;
 }
 
-.subscribe-email:-webkit-autofill:focus {
+.subscribe__email:-webkit-autofill:focus {
     border: 1px solid var(--accent-color);
     -webkit-text-fill-color: var(--primary-white-color);
     caret-color: var(--primary-white-color);
     transition: border 250ms var(--timing-function);
 }
 
-.subscribe-email::placeholder {
+.subscribe__email::placeholder {
     color: var(--color-email-footer);
     transition: color 250ms var(--timing-function);
 }
 
-.subscribe-email:focus::placeholder {
+.subscribe__email:focus::placeholder {
     color: var(--accent-color);
     transition: color 250ms var(--timing-function);
 }
 
-.send {
+.subscribe__send {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -889,13 +933,13 @@ ul {
     transition: border 250ms var(--timing-function);
 }
 
-.send:focus {
+.subscribe__send:focus {
     outline: none;
     border: 2px solid var(--color-email-footer);
     transition: border 250ms var(--timing-function);
 }
 
-.send-text {
+.subscribe__send-text {
     color: var(--primary-white-color);
     font-weight: 700;
     font-size: 16px;
@@ -903,7 +947,7 @@ ul {
     letter-spacing: 0.06em;
 }
 
-.send-icon {
+.subscribe__send-icon {
    margin-left: 10px;
 }
 
