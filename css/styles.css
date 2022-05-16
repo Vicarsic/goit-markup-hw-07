@@ -146,11 +146,16 @@ ul {
 
 .site-nav__logo-black {
     font-family: inherit;
+   
+}
+.logo--black {
     color: var(--title-text-color);
 }
-
 .site-nav__logo-white {
     font-family: inherit;
+}
+
+.logo--white {
     color: var(--primary-white-color);
 }
 .site-nav__logo-down {
