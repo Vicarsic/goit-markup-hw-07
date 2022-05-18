@@ -82,25 +82,20 @@ ul {
     text-decoration: none;
 } */
 
-.link:hover,
+/* .link:hover,
 .link:focus {
     color: var(--accent-color);
     transition: color 250ms var(--timing-function);
-}
+} */
 
-.list {
+/* .list {
     list-style: none;
-} 
+}  */
 
-.site-nav__link.link:hover,
-.site-nav__link.link:focus {
-    color: var(--accent-color);
-    transition: color 250ms var(--timing-function);
-}
 
 /* Header */
 
-.logo {
+/* .logo {
     display: inline-block;
 }
 
@@ -112,7 +107,6 @@ ul {
 .hader {
     border-bottom: 1px solid var(--border-button-color);
 }
-
 
 .site-nav.list {
     display: flex;
@@ -191,15 +185,22 @@ ul {
     margin-bottom: 20px;
 }
 
+.site-nav__link.link:hover,
+.site-nav__link.link:focus {
+    color: var(--accent-color);
+    transition: color 250ms var(--timing-function);
+}
+
 .site-nav.list .link--current {
     color: var(--accent-color);
 }
 
 .site-nav__link--current {
     color: var(--accent-color);
+    
 }
 
-.link--current::after {
+.site-nav__link--current::after {
     content: "";
     width: 100%;
     height: 4px;
@@ -255,11 +256,11 @@ ul {
     margin-right: 10px;
     fill: currentColor;
     text-align: justify;
-}
+} */
 
 /* Filter Portfolio */
 
-.filter {
+/* .filter {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -365,7 +366,7 @@ ul {
     font-size: 16px;
     line-height: 1.88;
     color: var(--primary-text-color);
-}
+} */
 
 
 
@@ -409,7 +410,7 @@ ul {
 
 /* Buttons */
 
-.filter .but+.but {
+/* .filter .but+.but {
     margin-left: 8px;
 }
 
@@ -494,14 +495,14 @@ ul {
         border-radius 250ms var(--timing-function),
         box-shadow 250ms var(--timing-function),
         background-color 250ms var(--timing-function);
-}
+} */
 
 /* Преимущества */
 
-.section {
+/* .section {
     padding-top: 94px;
     padding-bottom: 94px;
-}
+} */
 
 /* .title {
     font-weight: 700;
@@ -512,9 +513,9 @@ ul {
     color: var(--title-text-color);
 } */
 
-.first-item {
+/* .first-item {
     margin-top: 10px;
-}
+} */
 
 /* .feature-icon {
     display: flex;
@@ -563,7 +564,7 @@ ul {
 
 /* Чем занимаемся */
 
-.section-doing {
+/* .section-doing {
     padding-top: 0;
 }
 
@@ -624,11 +625,11 @@ ul {
     bottom: 0;
     align-items: center;
     justify-content: center;
-}
+} */
 
 /* Наша команда */
 
-.section-team {
+/* .section-team {
     background-color: var(--team-bgd-color);
 }
 
@@ -728,11 +729,11 @@ ul {
 
 .staff {
     background-color: var(--primary-white-color);
-}
+} */
 
 /* Наши клиенты */
 
-.clients {
+/* .clients {
     background-color: var(--primary-white-color);
 
 }
@@ -809,11 +810,11 @@ ul {
 .client-icon:focus {
     border-color: var(--accent-color);
     transition: border-color 250ms var(--timing-function);
-}
+} */
 
 /* Футер */
 
-.footer {
+/* .footer {
     background-color: var(--hero-bgd-color);
     font-size: 14px;
 }
@@ -948,7 +949,7 @@ ul {
 }
 
 /* Футер Subscribe / Подписаться */
-
+/* 
 .subscribe {
     display: block;
     width: 570px;
@@ -995,7 +996,7 @@ ul {
 .subscribe__email:-webkit-autofill {
     border: 1px solid var(--color-email-footer);
     -webkit-text-fill-color: var(--color-email-footer);
-    /* -webkit-box-shadow: 0 0 0px 1000px #212121 inset; */
+    /* -webkit-box-shadow: 0 0 0px 1000px #212121 inset; 
     transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -1046,9 +1047,11 @@ ul {
 
 .subscribe__send-icon {
     margin-left: 10px;
-}
+} 
 
-.backdrop {
+/* Backdrop */
+
+/* .backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -1275,4 +1278,4 @@ ul {
 .form-button:focus {
     outline: none;
     box-shadow: 0 0 0 0.2em var(--icon-color);
-}
+} */
