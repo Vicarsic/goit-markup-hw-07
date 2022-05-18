@@ -13,3 +13,9 @@ body {
 .list {
     list-style: none;
 }
+
+.link:hover,
+.link:focus {
+    color: var(--accent-color);
+    transition: color 250ms var(--timing-function);
+}

@@ -11,7 +11,7 @@
     color: var(--title-text-color);
 }
 
-.container .section-title {
+.section-title {
     text-align: center;
 }
 
@@ -28,7 +28,7 @@
     flex-basis: calc(100% - 60px/3);
 }
 
-.work-list>.working+.working {
+.work-list > .working + .working {
     margin-left: 30px;
 }
 

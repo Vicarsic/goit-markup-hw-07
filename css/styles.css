@@ -10,7 +10,7 @@
 /* адресс внизу color: rgba(255, 255, 255, 0.6); */
 /* абзацы color: #757575; */
 
-:root {
+/* :root {
     --primary-text-color: #757575;
     --title-text-color: #212121;
     --primary-white-color: #FFFFFF;
@@ -33,16 +33,16 @@
     --bshsix: rgba(0, 0, 0, 0.14);
     --bshseven: rgba(0, 0, 0, 0.2);
     --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
-body {
+/* body {
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.03em;
     background-color: var(--primary-white-color);
     color: var(--primary-text-color);
-}
+} */
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -80,7 +80,7 @@ ul {
 .link-two,
 .link-down {
     text-decoration: none;
-}
+} */
 
 .link:hover,
 .link:focus {
@@ -90,6 +90,12 @@ ul {
 
 .list {
     list-style: none;
+} 
+
+.site-nav__link.link:hover,
+.site-nav__link.link:focus {
+    color: var(--accent-color);
+    transition: color 250ms var(--timing-function);
 }
 
 /* Header */
@@ -189,7 +195,7 @@ ul {
     color: var(--accent-color);
 }
 
-.site-nav .link .link--current {
+.site-nav__link--current {
     color: var(--accent-color);
 }
 
@@ -232,8 +238,8 @@ ul {
         background-color 250ms var(--timing-function);
 }
 
-.contact__link .contact__icon-contact:hover,
-.contact__link .contact__icon-contact:focus {
+.contact__icon-contact:hover,
+.contact__icon-contact:focus {
     color: var(--primary-text-color);
     fill: var(--accent-color);
     transition: color 250ms var(--timing-function),
@@ -587,13 +593,18 @@ ul {
     flex-basis: calc(100% - 60px/3);
 }
 
-.work-list>.working+.working {
+.work-list > .working + .working {
     margin-left: 30px;
 }
 
 .work-list {
     font-size: 14px;
     text-align: center;
+}
+
+.desk {
+    display: flex;
+    position: relative;
 }
 
 .desk-item {
@@ -606,14 +617,7 @@ ul {
     text-transform: uppercase;
     color: var(--primary-white-color);
     background-color: rgba(47, 48, 58, 0.8);
-}
 
-.desk {
-    display: flex;
-    position: relative;
-}
-
-.desk-item {
     position: absolute;
     display: flex;
     left: 0;
@@ -621,8 +625,6 @@ ul {
     align-items: center;
     justify-content: center;
 }
-
-
 
 /* Наша команда */
 
