@@ -63,7 +63,8 @@ ul {
   margin: 0;
 }
 
-.list {
+a {
+  text-decoration: none;
   list-style: none;
 }
 
@@ -72,16 +73,6 @@ body {
   letter-spacing: 0.03em;
   background-color: var(--primary-white-color);
   color: var(--primary-text-color);
-}
-
-.link,
-.link-two,
-.link-down {
-  text-decoration: none;
-}
-
-.list {
-  list-style: none;
 }
 
 .link:hover,
@@ -94,7 +85,7 @@ body {
   margin-left: 8px;
 }
 
-.hero .button {
+.hero-button {
   display: inline-block;
   text-align: center;
   margin: 0;
@@ -114,15 +105,7 @@ body {
   background-color: var(--team-bgd-color);
   transition: color 250ms var(--timing-function), box-shadow 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
-.buttons:hover {
-  background-color: var(--accent-color);
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px var(--bowshadow-one), 0px 1px 2px var(--boxshadow-two), 0px 2px 2px var(--boxshadow-three);
-  border-radius: 4px;
-  transition: color 250ms var(--timing-function), border-radius 250ms var(--timing-function), box-shadow 250ms var(--timing-function), background-color 250ms var(--timing-function);
-}
-.buttons:focus {
+.buttons:hover, .buttons:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
   background-color: var(--accent-color);
@@ -148,11 +131,7 @@ body {
   letter-spacing: 0.06em;
   transition: color 250ms var(--timing-function), border-radius 250ms var(--timing-function), box-shadow 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
-.button:hover {
-  background-color: var(--accent-color);
-  transition: background-color 250ms var(--timing-function);
-}
-.button:focus {
+.button:hover, .button:focus {
   background-color: var(--accent-color);
   transition: background-color 250ms var(--timing-function);
 }
@@ -406,7 +385,7 @@ body {
   display: inline-block;
 }
 
-.hader .container {
+.hader__container {
   display: flex;
   align-items: center;
 }
@@ -433,6 +412,12 @@ body {
 
 .site-nav__item:last-child {
   margin-right: 0;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  transition: color 250ms var(--timing-function);
 }
 
 .site-nav {
@@ -462,7 +447,7 @@ body {
   color: var(--title-text-color);
 }
 
-.site-nav__logo-blue {
+.logo {
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
@@ -471,31 +456,15 @@ body {
   color: var(--accent-color);
 }
 
-.site-nav__logo-blue.link {
+.logo {
   margin-right: 93px;
   padding-top: 24px;
   padding-bottom: 25px;
 }
 
-.site-nav__logo-black {
+.logo__black {
   font-family: inherit;
-}
-
-.logo--black {
   color: var(--title-text-color);
-}
-
-.site-nav__logo-white {
-  font-family: inherit;
-}
-
-.logo--white {
-  color: var(--primary-white-color);
-}
-
-.site-nav__logo-down {
-  display: inline-block;
-  margin-bottom: 20px;
 }
 
 .site-nav__link.link:hover,
@@ -524,15 +493,18 @@ body {
 }
 
 .contact {
+  display: flex;
+  margin-left: auto;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
-.contact.list {
-  display: flex;
-  margin-left: auto;
+.contact__link:hover,
+.contact__link:focus {
+  color: var(--accent-color);
+  transition: color 250ms var(--timing-function);
 }
 
 .contact .contact__item + .contact__item,
@@ -548,19 +520,19 @@ body {
   transition: color 250ms var(--timing-function), fill 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 
-.contact__icon-contact:hover,
-.contact__icon-contact:focus {
+.contact__icon:hover,
+.contact__icon:focus {
   color: var(--primary-text-color);
   fill: var(--accent-color);
   transition: color 250ms var(--timing-function), fill 250ms var(--timing-function);
 }
 
-.contact__icon-contact::before {
+.contact__icon::before {
   display: flex;
   align-items: center;
 }
 
-.contact__icon-contact {
+.contact__icon {
   margin-right: 10px;
   fill: currentColor;
   text-align: justify;
@@ -814,14 +786,14 @@ body {
   background-color: transparent;
   transition: border-color 250ms var(--timing-function), background-color 250ms var(--timing-function), fill 250ms var(--timing-function);
 }
-.client-link:hover {
+.client-link:hover, .client-link:focus {
   border-color: var(--accent-color);
   fill: var(--accent-color);
   transition: border-color 250ms var(--timing-function), fill 250ms var(--timing-function);
 }
-.client-link:focus {
-  border-color: var(--accent-color);
+.client-link:hover .svg, .client-link:focus .svg {
   fill: var(--accent-color);
+  border-color: var(--accent-color);
   transition: border-color 250ms var(--timing-function), fill 250ms var(--timing-function);
 }
 
@@ -832,13 +804,12 @@ body {
   border-radius: 4px;
   transition: color 250ms var(--timing-function), border-color 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
-.client-icon:hover {
+.client-icon:hover, .client-icon:focus {
   border-color: var(--accent-color);
   transition: border-color 250ms var(--timing-function);
 }
-.client-icon:focus {
-  border-color: var(--accent-color);
-  transition: border-color 250ms var(--timing-function);
+.client-icon:first-child {
+  margin-left: 0;
 }
 
 .svg {
@@ -846,19 +817,8 @@ body {
   transition: fill 250ms var(--timing-function);
 }
 
-.client-link:hover .svg,
-.client-link:focus .svg {
-  fill: var(--accent-color);
-  border-color: var(--accent-color);
-  transition: border-color 250ms var(--timing-function), fill 250ms var(--timing-function);
-}
-
 .client-icon + .client-icon {
   margin-left: 30px;
-}
-
-.client-icon:first-child {
-  margin-left: 0;
 }
 
 .filter {
@@ -882,23 +842,12 @@ body {
   transition: color 250ms var(--timing-function), box-shadow 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 
-.pic:hover .top-text,
-.pic:focus .top-text {
-  transform: translateY(0);
-}
-
 .card {
   display: block;
   transition: color 250ms var(--timing-function), border 250ms var(--timing-function), box-shadow 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
-
-.card:hover,
-.card:focus {
-  background-color: var(--primary-white-color);
-  border: 1px solid var(--border-color);
-  box-sizing: border-box;
+.card:hover, .card:focus {
   box-shadow: 0px 1px 1px var(--boxshadow-three), 0px 4px 4px var(--boxshadow-four), 1px 4px 6px var(--boxshadow-five);
-  transition: border 250ms var(--timing-function), box-shadow 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 
 .top-wrap {
@@ -919,6 +868,9 @@ body {
   transform: translateY(100%);
   transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function), transform 250ms var(--timing-function);
   overflow: auto;
+}
+.pic:hover .top-text, .pic:focus .top-text {
+  transform: translateY(0);
 }
 
 .project.list .pic {
@@ -976,6 +928,19 @@ body {
 
 .footer-container {
   flex-grow: 1;
+}
+
+.footer__logo {
+  display: inline-block;
+}
+
+.logo__white {
+  font-family: inherit;
+  color: var(--primary-white-color);
+}
+
+.site-nav__logo-down {
+  display: inline-block;
 }
 
 .address {

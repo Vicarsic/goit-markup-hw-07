@@ -2,7 +2,7 @@
     margin-left: 8px;
 }
 
-.hero .button {
+.hero-button {
     display: inline-block;
     text-align: center;
     margin: 0;
@@ -24,7 +24,7 @@
         box-shadow 250ms var(--timing-function),
         background-color 250ms var(--timing-function);
 
-    &:hover {
+    &:hover, &:focus {
         background-color: var(--accent-color);
         color: var(--primary-white-color);
         
@@ -38,23 +38,7 @@
         border-radius 250ms var(--timing-function),
         box-shadow 250ms var(--timing-function),
         background-color 250ms var(--timing-function);
-    }
-    
-    &:focus {
-        background-color: var(--accent-color);
-        color: var(--primary-white-color);
-
-        background-color: var(--accent-color);
-
-        box-shadow: 0px 3px 1px var(--bowshadow-one),
-        0px 1px 2px var(--boxshadow-two),
-        0px 2px 2px var(--boxshadow-three);
-        border-radius: 4px;
-        transition: color 250ms var(--timing-function),
-        border-radius 250ms var(--timing-function),
-        box-shadow 250ms var(--timing-function),
-        background-color 250ms var(--timing-function);
-    }
+    }    
 }
 
 .button {
@@ -77,14 +61,10 @@
         box-shadow 250ms var(--timing-function),
         background-color 250ms var(--timing-function);
 
-    &:hover {
+    &:hover, &:focus {
         background-color: var(--accent-color);
         transition: background-color 250ms var(--timing-function);
-    }
-    &:focus {
-        background-color: var(--accent-color);
-        transition: background-color 250ms var(--timing-function);
-    }
+    }    
 }
 
 .but {

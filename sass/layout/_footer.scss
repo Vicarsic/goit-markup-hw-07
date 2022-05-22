@@ -16,6 +16,20 @@
     flex-grow: 1;
 }
 
+.footer__logo {
+    display: inline-block;
+}
+
+.logo__white {
+    font-family: inherit;
+    color: var(--primary-white-color);
+}
+
+.site-nav__logo-down {
+    display: inline-block;
+
+}
+
 .address {
     font-style: normal;
 }
